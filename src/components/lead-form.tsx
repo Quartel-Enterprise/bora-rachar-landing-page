@@ -7,17 +7,17 @@ export function LeadForm() {
   }
 
   return (
-    <form className="flex gap-4 mt-6 max-w-lg" onSubmit={handleLeadSubmit}>
+    <form className="mt-6 flex max-w-lg gap-4" onSubmit={handleLeadSubmit}>
       <input
         type="email"
         id="email"
         placeholder="Seu melhor e-mail"
-        className="outline-0 bg-transparent border-white border-[1px] text-white placeholder:text-white rounded-lg px-4 py-3 w-full"
+        className="w-full rounded-lg border-[1px] border-white bg-transparent px-4 py-3 text-white outline-0 placeholder:text-white"
       />
 
       <button
         type="submit"
-        className="bg-tertiary text-white font-bold rounded-lg px-8 py-3"
+        className="rounded-lg bg-tertiary px-8 py-3 font-bold text-white"
       >
         Cadastrar
       </button>

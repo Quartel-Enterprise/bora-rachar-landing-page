@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
-import { Ubuntu, Roboto } from 'next/font/google'
 import './globals.css'
+
+import type { Metadata } from 'next'
+import { Roboto, Ubuntu } from 'next/font/google'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -25,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${roboto.variable} ${ubuntu.variable}`} lang="pt-BR">
-      <body className="antialiased font-roboto">{children}</body>
+      <body className="font-roboto antialiased">{children}</body>
     </html>
   )
 }

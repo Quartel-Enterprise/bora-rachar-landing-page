@@ -8,7 +8,7 @@ export function SpacingWrapper({
   ...props
 }: SpacingWrapperProps) {
   return (
-    <div className={`max-w-[1200px] mx-auto w-full ${className}`} {...props}>
+    <div className={`mx-auto w-full max-w-[1200px] ${className}`} {...props}>
       {children}
     </div>
   )

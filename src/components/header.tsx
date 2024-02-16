@@ -1,9 +1,10 @@
 import Link from 'next/link'
+
 import { Logo } from '@/assets/logo'
 
 export function Header() {
   return (
-    <div className="flex items-center justify-between py-3.5 px-4 md:px-8">
+    <div className="flex items-center justify-between px-4 py-3.5 md:px-8">
       <div className="flex items-center gap-4">
         <Logo />
         <div className="font-ubuntu text-lg">Bora Rachar</div>
@@ -18,7 +19,7 @@ export function Header() {
         </Link>
         <Link
           href="#faca_parte"
-          className="bg-black text-white px-6 py-2.5 rounded-lg font-bold"
+          className="rounded-lg bg-black px-6 py-2.5 font-bold text-white"
         >
           Inscreva-se
         </Link>
