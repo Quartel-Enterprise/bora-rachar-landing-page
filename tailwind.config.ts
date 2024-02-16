@@ -13,6 +13,12 @@ const config: Config = {
         roboto: 'var(--font-roboto)',
         ubuntu: 'var(--font-ubuntu)',
       },
+      colors: {
+        primary: 'hsl(var(--logo))',
+        secondary: 'hsl(var(--secondary))',
+        tertiary: 'hsl(var(--tertiary))',
+        logo: 'hsl(var(--logo))',
+      },
     },
   },
   plugins: [],
