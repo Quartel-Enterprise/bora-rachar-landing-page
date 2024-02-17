@@ -20,8 +20,8 @@ export function Header() {
 
         <div className="mx-1 h-7 w-px bg-gray-300" />
 
-        <a href="https://instagram.com/appborarachar" target="__blank">
-          <Instagram className="h-6 w-6 text-rose-500 opacity-85" />
+        <a href="https://instagram.com/appborarachar" target="_blank">
+          <Instagram className="h-6 w-6 text-rose-600 opacity-75" />
         </a>
       </div>
 

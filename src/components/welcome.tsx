@@ -20,7 +20,18 @@ export function Welcome() {
           <LeadForm />
         </div>
 
-        <FriendSharingBill className="hidden lg:block" />
+        <div className="flex flex-col">
+          <FriendSharingBill className="hidden lg:block" />
+          <span className="text-end text-xs text-white opacity-40">
+            <a
+              target="_blank"
+              href="https://br.freepik.com/vetores-gratis/ilustracao-do-conceito-de-conta_5354443.htm"
+            >
+              Imagem de storyset
+            </a>{' '}
+            no Freepik
+          </span>
+        </div>
       </SpacingWrapper>
     </div>
   )
