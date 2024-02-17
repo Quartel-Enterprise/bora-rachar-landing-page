@@ -1,3 +1,4 @@
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { HowToCreateDebt } from '@/components/how-to-create-debt'
 import { HowToPayDebt } from '@/components/how-to-pay-debt'
@@ -14,6 +15,7 @@ export default function Home() {
       <HowToCreateDebt />
       <Roadmap />
       <TakePart />
+      <Footer />
     </>
   )
 }

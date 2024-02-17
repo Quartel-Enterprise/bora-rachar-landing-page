@@ -13,7 +13,7 @@ export function Header() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-3.5 md:px-8">
+    <header className="flex items-center justify-between px-4 py-3.5 md:px-8">
       <div className="flex items-center gap-4">
         <Logo />
         <div className="font-ubuntu text-lg">Bora Rachar</div>
@@ -26,25 +26,25 @@ export function Header() {
       </div>
 
       <div className="flex items-center gap-6">
-        <a
+        <nav
           onClick={() => handleNavClick('como_funciona')}
           className="hidden cursor-pointer sm:flex"
         >
           Como Funciona
-        </a>
-        <a
+        </nav>
+        <nav
           onClick={() => handleNavClick('inovacao')}
           className="hidden cursor-pointer sm:flex"
         >
           Inovação
-        </a>
-        <a
+        </nav>
+        <nav
           onClick={() => handleNavClick('inscreva_se')}
           className="xs:block hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white"
         >
           Inscreva-se
-        </a>
+        </nav>
       </div>
-    </div>
+    </header>
   )
 }
