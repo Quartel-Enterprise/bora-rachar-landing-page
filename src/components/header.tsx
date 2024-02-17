@@ -1,5 +1,7 @@
 'use client'
 
+import { Instagram } from 'lucide-react'
+
 import { Logo } from '@/assets/logo'
 
 export function Header() {
@@ -15,6 +17,12 @@ export function Header() {
       <div className="flex items-center gap-4">
         <Logo />
         <div className="font-ubuntu text-lg">Bora Rachar</div>
+
+        <div className="mx-1 h-7 w-px bg-gray-300" />
+
+        <a href="https://instagram.com/appborarachar" target="__blank">
+          <Instagram className="h-6 w-6 text-rose-500 opacity-85" />
+        </a>
       </div>
 
       <div className="flex items-center gap-6">

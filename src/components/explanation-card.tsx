@@ -15,7 +15,7 @@ export function ExplanationCard({
 }: ExplanationCardProps) {
   return (
     <div
-      className={`flex ${reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'} mx-auto w-full max-w-4xl items-center`}
+      className={`flex shadow-sm ${reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'} mx-auto w-full max-w-4xl items-center`}
     >
       <div
         className={`h-[324px] w-11/12 px-11 py-11 md:w-1/2 md:px-16 ${secondary ? 'bg-primary' : 'bg-white'}`}
