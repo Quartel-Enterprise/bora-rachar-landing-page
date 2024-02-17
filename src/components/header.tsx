@@ -18,7 +18,7 @@ export function Header() {
         <Logo />
         <div className="font-ubuntu text-lg">Bora Rachar</div>
 
-        <div className="mx-1 h-7 w-px bg-gray-300" />
+        <div className="xs:hidden mx-1 h-7 w-px bg-gray-300 sm:block" />
 
         <a href="https://instagram.com/appborarachar" target="_blank">
           <Instagram className="h-6 w-6 text-rose-600 opacity-75" />
@@ -40,7 +40,7 @@ export function Header() {
         </a>
         <a
           onClick={() => handleNavClick('inscreva_se')}
-          className="cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white"
+          className="xs:block hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white"
         >
           Inscreva-se
         </a>

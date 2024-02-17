@@ -34,9 +34,8 @@ export function Roadmap() {
         </ol>
       </div>
 
-      <div className="flex flex-col">
+      <div className="hidden flex-col md:flex">
         <Image
-          className="hidden md:block"
           src="/olhando_para_o_futuro.png"
           width={500}
           height={370}

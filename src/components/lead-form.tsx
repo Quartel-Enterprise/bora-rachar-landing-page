@@ -7,7 +7,10 @@ export function LeadForm() {
   }
 
   return (
-    <form className="mt-6 flex max-w-lg gap-4" onSubmit={handleLeadSubmit}>
+    <form
+      className="xs:flex-row xs:gap-4 mt-6 flex w-full max-w-lg flex-col gap-2"
+      onSubmit={handleLeadSubmit}
+    >
       <input
         type="email"
         id="email"

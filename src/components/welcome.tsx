@@ -20,8 +20,8 @@ export function Welcome() {
           <LeadForm />
         </div>
 
-        <div className="flex flex-col">
-          <FriendSharingBill className="hidden lg:block" />
+        <div className="hidden flex-col lg:flex">
+          <FriendSharingBill />
           <span className="text-end text-xs text-white opacity-40">
             <a
               target="_blank"

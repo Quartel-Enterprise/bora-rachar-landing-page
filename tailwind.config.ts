@@ -19,6 +19,9 @@ const config: Config = {
         tertiary: 'hsl(var(--tertiary))',
         logo: 'hsl(var(--logo))',
       },
+      screens: {
+        xs: '375px',
+      },
     },
   },
   plugins: [],
