@@ -14,7 +14,7 @@ const config: Config = {
         ubuntu: 'var(--font-ubuntu)',
       },
       colors: {
-        primary: 'hsl(var(--logo))',
+        primary: 'hsl(var(--primary))',
         secondary: 'hsl(var(--secondary))',
         tertiary: 'hsl(var(--tertiary))',
         logo: 'hsl(var(--logo))',
