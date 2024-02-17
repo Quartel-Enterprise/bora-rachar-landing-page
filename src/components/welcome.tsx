@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { FriendSharingBill } from '@/assets/amigos-dividindo-conta'
 
 import { LeadForm } from './lead-form'
@@ -21,15 +19,6 @@ export function Welcome() {
 
           <LeadForm />
         </div>
-
-        <Image
-          className="hidden"
-          src="/amigos-dividindo-conta.png"
-          width={472}
-          height={378}
-          quality={100}
-          alt="Desenho de amigos dividindo conta com celular"
-        />
 
         <FriendSharingBill className="hidden lg:block" />
       </SpacingWrapper>

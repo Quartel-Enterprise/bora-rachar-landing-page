@@ -1,8 +1,15 @@
-import Link from 'next/link'
+'use client'
 
 import { Logo } from '@/assets/logo'
 
 export function Header() {
+  function handleNavClick(id: string) {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div className="flex items-center justify-between px-4 py-3.5 md:px-8">
       <div className="flex items-center gap-4">
@@ -11,18 +18,24 @@ export function Header() {
       </div>
 
       <div className="flex items-center gap-6">
-        <Link href="#como_funciona" className="hidden sm:flex">
+        <a
+          onClick={() => handleNavClick('como_funciona')}
+          className="hidden cursor-pointer sm:flex"
+        >
           Como Funciona
-        </Link>
-        <Link href="#inovacao" className="hidden sm:flex">
+        </a>
+        <a
+          onClick={() => handleNavClick('inovacao')}
+          className="hidden cursor-pointer sm:flex"
+        >
           Inovação
-        </Link>
-        <Link
-          href="#faca_parte"
-          className="rounded-lg bg-black px-6 py-2.5 font-bold text-white"
+        </a>
+        <a
+          onClick={() => handleNavClick('inscreva_se')}
+          className="cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white"
         >
           Inscreva-se
-        </Link>
+        </a>
       </div>
     </div>
   )
