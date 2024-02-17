@@ -6,7 +6,7 @@ import { Roboto, Ubuntu } from 'next/font/google'
 const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
-  weight: ['400', '700'],
+  weight: ['400', '700', '500'],
 })
 const ubuntu = Ubuntu({
   subsets: ['latin'],

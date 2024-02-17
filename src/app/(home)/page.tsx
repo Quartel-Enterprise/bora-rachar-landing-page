@@ -1,4 +1,5 @@
 import { Header } from '@/components/header'
+import { HowToPayDebt } from '@/components/how-to-pay-debt'
 import { Welcome } from '@/components/welcome'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Header />
       <Welcome />
+      <HowToPayDebt />
     </>
   )
 }
