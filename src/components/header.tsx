@@ -13,12 +13,12 @@ export function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between px-4 py-3.5 md:px-8">
+    <div className="flex items-center justify-between px-4 py-3.5 md:px-8">
       <div className="flex items-center gap-4">
         <Logo />
         <div className="font-ubuntu text-lg">Bora Rachar</div>
 
-        <div className="xs:hidden mx-1 h-7 w-px bg-gray-300 sm:block" />
+        <div className="mx-1 h-7 w-px bg-gray-300 xs:hidden sm:block" />
 
         <a href="https://instagram.com/appborarachar" target="_blank">
           <Instagram className="h-6 w-6 text-rose-600 opacity-75" />
@@ -40,11 +40,11 @@ export function Header() {
         </nav>
         <nav
           onClick={() => handleNavClick('inscreva_se')}
-          className="xs:block hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white"
+          className="hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white xs:block"
         >
           Inscreva-se
         </nav>
       </div>
-    </header>
+    </div>
   )
 }
