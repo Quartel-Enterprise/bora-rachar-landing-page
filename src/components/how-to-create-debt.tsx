@@ -12,12 +12,14 @@ export function HowToCreateDebt() {
         <div className="flex flex-col gap-6 md:gap-12">
           <ExplanationCard
             step={1}
+            image="/criar-novo-grupo.webp"
             title="Crie seu Grupo"
             description="Dentro do Bora Rachar é possível criar grupos, em que ficarão concentrados os seus gastos e dos seus amigos."
           />
 
           <ExplanationCard
             step={2}
+            image="/convidar-amigos.webp"
             title="Convide seus Amigos"
             description="Ao criar um grupo, você poderá convidar seus amigos para participar."
             reverse
@@ -25,6 +27,7 @@ export function HowToCreateDebt() {
 
           <ExplanationCard
             step={3}
+            image="/rachar-conta.webp"
             title="Dívida suas Contas"
             description="Agora é só cadastrar as suas contas para dividir entre os participantes do grupo da maneira que preferir!"
           />
