@@ -3,12 +3,20 @@
 import { Loader2 } from 'lucide-react'
 import { useFormStatus } from 'react-dom'
 
-export function LeadFormSubmitButton() {
+import useAmplitudeContext from '@/hooks/useAmplitudeContext'
+
+export function LeadFormSubmitButton({ origin }: { origin: string }) {
+  const { trackAmplitudeEvent } = useAmplitudeContext()
   const { pending } = useFormStatus()
+
+  function handleSubmitFormClicked() {
+    trackAmplitudeEvent('lead_form_submitted', { origin })
+  }
 
   return (
     <button
       type="submit"
+      onClick={handleSubmitFormClicked}
       className="flex justify-center rounded-lg bg-tertiary px-8 py-3 font-bold text-white disabled:opacity-70"
       disabled={pending}
     >

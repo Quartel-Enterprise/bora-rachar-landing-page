@@ -3,7 +3,7 @@ import { SpacingWrapper } from './spacing-wrapper'
 
 export function HowToPayDebt() {
   return (
-    <SpacingWrapper id="como_funciona">
+    <SpacingWrapper id="how_it_work">
       <h2 className="mb-11 text-4xl font-medium md:mb-16">
         Como Pagar uma Dívida?
       </h2>

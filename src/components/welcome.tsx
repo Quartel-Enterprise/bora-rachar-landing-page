@@ -17,7 +17,7 @@ export function Welcome() {
             para fila de espera
           </p>
 
-          <LeadForm />
+          <LeadForm origin="welcome" />
         </div>
 
         <div className="hidden flex-col lg:flex">

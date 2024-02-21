@@ -3,13 +3,21 @@
 import { Instagram } from 'lucide-react'
 
 import { Logo } from '@/assets/logo'
+import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export function Header() {
+  const { trackAmplitudeEvent } = useAmplitudeContext()
+
   function handleNavClick(id: string) {
+    trackAmplitudeEvent(`header_${id}_click`)
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+
+  function handleInstagramClick() {
+    trackAmplitudeEvent('header_instagram_click')
   }
 
   return (
@@ -20,26 +28,30 @@ export function Header() {
 
         <div className="mx-1 h-7 w-px bg-gray-300 xs:hidden sm:block" />
 
-        <a href="https://instagram.com/appborarachar" target="_blank">
+        <a
+          href="https://instagram.com/appborarachar"
+          target="_blank"
+          onClick={handleInstagramClick}
+        >
           <Instagram className="h-6 w-6 text-rose-600 opacity-75" />
         </a>
       </div>
 
       <div className="flex items-center gap-6">
         <nav
-          onClick={() => handleNavClick('como_funciona')}
+          onClick={() => handleNavClick('how_it_work')}
           className="hidden cursor-pointer sm:flex"
         >
           Como Funciona
         </nav>
         <nav
-          onClick={() => handleNavClick('inovacao')}
+          onClick={() => handleNavClick('innovation')}
           className="hidden cursor-pointer sm:flex"
         >
           Inovação
         </nav>
         <nav
-          onClick={() => handleNavClick('inscreva_se')}
+          onClick={() => handleNavClick('register')}
           className="hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white xs:block"
         >
           Inscreva-se

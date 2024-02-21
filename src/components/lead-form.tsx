@@ -1,20 +1,34 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useFormState } from 'react-dom'
 
 import {
   createFirestoreLead,
   CreateFirestoreLeadActionState,
 } from '@/actions/create-firestore-lead'
+import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 import { InputValidationMessage } from './input-validation-message'
 import { LeadFormSubmitButton } from './lead-form-submit-button'
 
-export function LeadForm() {
+export function LeadForm({ origin }: { origin: string }) {
+  const { trackAmplitudeEvent } = useAmplitudeContext()
   const [formState, createFirestoreLeadAction] = useFormState(
     createFirestoreLead,
     {} as CreateFirestoreLeadActionState,
   )
+
+  useEffect(() => {
+    if (formState?.success) {
+      trackAmplitudeEvent('lead_form_success')
+    }
+    if (formState?.error?.email) {
+      trackAmplitudeEvent('lead_form_error', {
+        message: formState.error.email[0],
+      })
+    }
+  }, [trackAmplitudeEvent, formState?.success, formState?.error?.email])
 
   const inputBorderColor = formState?.error?.email
     ? 'border-rose-500'
@@ -36,7 +50,7 @@ export function LeadForm() {
         autoComplete="email"
       />
 
-      <LeadFormSubmitButton />
+      <LeadFormSubmitButton origin={origin} />
 
       {formState?.error?.email && (
         <InputValidationMessage message={formState.error.email[0]} error />

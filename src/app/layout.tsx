@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto, Ubuntu } from 'next/font/google'
 
+import AmplitudeContextProvider from '@/context/amplitude'
+
 const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
@@ -26,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${roboto.variable} ${ubuntu.variable}`} lang="pt-BR">
-      <body className="font-roboto antialiased">{children}</body>
+      <body className="font-roboto antialiased">
+        <AmplitudeContextProvider>{children}</AmplitudeContextProvider>
+      </body>
     </html>
   )
 }

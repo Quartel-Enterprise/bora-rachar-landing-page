@@ -41,6 +41,7 @@ export function ExplanationCard({
 
       <div className="relative flex h-[324px] w-11/12 items-end justify-center bg-secondary md:w-1/2">
         <Image
+          className="h-[310px] w-[210px]"
           src={image}
           alt={image
             ?.replaceAll('-', ' ')

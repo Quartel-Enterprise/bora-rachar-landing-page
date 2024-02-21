@@ -7,7 +7,7 @@ export function Roadmap() {
   return (
     <SpacingWrapper
       className="flex items-center justify-between gap-20"
-      id="inovacao"
+      id="innovation"
     >
       <div className="flex flex-col gap-3">
         <h2 className="mb-8 text-4xl font-medium md:mb-11">É só isso?</h2>
