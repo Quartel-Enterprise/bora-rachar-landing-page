@@ -52,7 +52,7 @@ export function Header() {
         </nav>
         <nav
           onClick={() => handleNavClick('register')}
-          className="hidden cursor-pointer rounded-lg bg-black px-6 py-2.5 font-bold text-white xs:block"
+          className="hidden cursor-pointer rounded-lg bg-primary px-6 py-2.5 font-bold text-white xs:block"
         >
           Inscreva-se
         </nav>

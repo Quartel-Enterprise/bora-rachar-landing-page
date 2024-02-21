@@ -19,6 +19,7 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   title: 'Bora Rachar',
   description: 'Rache contas e experiências',
+  metadataBase: new URL('https://borarachar.com/'),
 }
 
 export default function RootLayout({

@@ -36,7 +36,7 @@ export function Roadmap() {
 
       <div className="hidden flex-col md:flex">
         <Image
-          src="/olhando_para_o_futuro.webp"
+          src="/olhando-para-o-futuro.webp"
           width={500}
           height={370}
           quality={100}
