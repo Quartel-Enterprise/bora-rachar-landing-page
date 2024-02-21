@@ -5,7 +5,7 @@ import { SpacingWrapper } from './spacing-wrapper'
 
 export function Welcome() {
   return (
-    <div className="flex h-[calc(100vh-82px)] items-center bg-gradient-to-br from-secondary to-logo">
+    <div className="flex h-[calc(100vh-82px)] min-h-[640px] items-center bg-gradient-to-br from-secondary to-logo">
       <SpacingWrapper className="flex items-center justify-between gap-16">
         <div className="flex flex-col gap-6">
           <h1 className="max-w-2xl text-5xl font-bold text-white">

@@ -56,7 +56,7 @@ export function LeadForm({ origin }: { origin: string }) {
         <InputValidationMessage message={formState.error.email[0]} error />
       )}
       {formState?.success && (
-        <InputValidationMessage message="Obrigado!, em breve entraremos em contato" />
+        <InputValidationMessage message="Obrigado! Em breve entraremos em contato" />
       )}
     </form>
   )

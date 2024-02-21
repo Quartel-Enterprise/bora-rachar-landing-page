@@ -12,7 +12,7 @@ export function Roadmap() {
       <div className="flex flex-col gap-3">
         <h2 className="mb-8 text-4xl font-medium md:mb-11">É só isso?</h2>
 
-        <p className="max-w-xl text-lg">Não!, o nosso planejamento:</p>
+        <p className="max-w-xl text-lg">Não! O nosso planejamento:</p>
         <ol className="flex flex-col gap-1">
           <li className="flex gap-2 text-black">
             <span className="flex items-center gap-1">
