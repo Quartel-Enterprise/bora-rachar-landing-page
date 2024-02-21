@@ -36,7 +36,7 @@ export default function LinkThree() {
           Entre para fila de espera para ser informado quando lançarmos nossa
           primeira versão:
         </p>
-        <LeadForm />
+        <LeadForm origin="links_page" />
       </div>
     </div>
   )
