@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.quare.blitzsplit",
+    "sha256_cert_fingerprints":
+    ["67:59:D0:FD:9D:C1:25:23:69:DC:6D:D0:FB:4E:C0:84:74:64:D3:AC:D3:15:9D:63:74:7F:86:D9:8E:79:C7:0D"]
+  }
+}]
