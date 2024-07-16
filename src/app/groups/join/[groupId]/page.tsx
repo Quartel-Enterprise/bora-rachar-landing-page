@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: JoinGroupProps) {
   return {
     title: `Junte-se ao grupo ${group?.name} no Bora Rachar!`,
     description: `Junte-se com ${group?.invitedBy?.name} ao grupo ${group?.name} e comece a dividir contas e experiências!`,
+    openGraph: {
+      images: [group?.photo],
+    },
   }
 }
 
