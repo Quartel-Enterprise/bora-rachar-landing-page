@@ -17,7 +17,7 @@ export const contentType = 'image/png'
 export async function getGroup(groupId: string): Promise<Group> {
   const response = await api(`/groups/${groupId}`, {
     next: {
-      revalidate: 60 * 60, // 1 hours
+      revalidate: 60 * 15, // 15 minutes
     },
   })
 
@@ -26,29 +26,12 @@ export async function getGroup(groupId: string): Promise<Group> {
   return group
 }
 
-export async function generateMetadata({
+export default async function OgImage({
   params,
 }: {
   params: { groupId: string }
 }) {
   const group = await getGroup(params.groupId)
-
-  return {
-    title: `Junte-se ao grupo ${group.name} no Bora Rachar!`,
-    description: `Junte-se com ${group.invitedBy.name} ao grupo ${group.name} e comece a dividir experiências!`,
-    openGraph: {
-      images: [group.photo],
-    },
-  }
-}
-
-export default async function Image({
-  params,
-}: {
-  params: { groupId: string }
-}) {
-  const group = await getGroup(params.groupId)
-  console.log(group)
 
   return new ImageResponse(
     (

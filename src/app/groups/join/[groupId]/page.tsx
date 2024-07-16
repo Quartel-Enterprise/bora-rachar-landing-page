@@ -1,26 +1,35 @@
-'use client'
-import { useEffect } from 'react'
+import { api } from '@/data/api'
+import { Group } from '@/data/types/group'
 
-interface JoinGroupProps {
+import OpenApp from './OpenApp'
+
+export interface JoinGroupProps {
   params: {
     groupId: string
   }
 }
 
+export async function getGroup(groupId: string): Promise<Group> {
+  const response = await api(`/landing-page/groups/${groupId}`, {
+    next: {
+      revalidate: 60 * 15, // 15 minutes
+    },
+  })
+
+  const group = await response.json()
+
+  return group
+}
+
+export async function generateMetadata({ params }: JoinGroupProps) {
+  const group = await getGroup(params.groupId)
+
+  return {
+    title: `Junte-se ao grupo ${group?.name} no Bora Rachar!`,
+    description: `Junte-se com ${group?.invitedBy?.name} ao grupo ${group?.name} e comece a dividir contas e experiências!`,
+  }
+}
+
 export default function JoinGroup({ params }: JoinGroupProps) {
-  useEffect(() => {
-    const appUrl = `blitzsplit://groups/${params.groupId}`
-
-    window.location.href = appUrl
-
-    const timer = setTimeout(() => {
-      if (!document.hidden) {
-        window.location.href = '/'
-      }
-    }, 2000)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [params.groupId])
+  return <OpenApp groupId={params.groupId} />
 }
