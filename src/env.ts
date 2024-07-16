@@ -10,6 +10,8 @@ export const env = createEnv({
     FIREBASE_MESSAGING_SENDER_ID: z.string(),
     FIREBASE_APP_ID: z.string(),
     FIREBASE_MEASUREMENT_ID: z.string(),
+    API_BASE_URL: z.string(),
+    API_TOKEN: z.string(),
   },
   clientPrefix: 'NEXT_PUBLIC_',
   client: {
@@ -24,6 +26,8 @@ export const env = createEnv({
     FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
     FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
     NEXT_PUBLIC_AMPLITUDE_API_KEY: process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY,
+    API_BASE_URL: process.env.API_BASE_URL,
+    API_TOKEN: process.env.API_TOKEN,
   },
   emptyStringAsUndefined: true,
 })
