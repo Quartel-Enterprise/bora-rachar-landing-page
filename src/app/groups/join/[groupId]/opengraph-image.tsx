@@ -14,7 +14,7 @@ export const size = {
 
 export const contentType = 'image/png'
 
-export async function getGroup(groupId: string): Promise<Group> {
+async function getGroupData(groupId: string): Promise<Group> {
   const response = await api(`/groups/${groupId}`, {
     next: {
       revalidate: 60 * 15, // 15 minutes
@@ -31,7 +31,7 @@ export default async function OgImage({
 }: {
   params: { groupId: string }
 }) {
-  const group = await getGroup(params.groupId)
+  const group = await getGroupData(params.groupId)
 
   return new ImageResponse(
     (

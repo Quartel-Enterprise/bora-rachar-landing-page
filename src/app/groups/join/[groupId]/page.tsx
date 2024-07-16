@@ -9,7 +9,7 @@ export interface JoinGroupProps {
   }
 }
 
-export async function getGroup(groupId: string): Promise<Group> {
+async function getGroupData(groupId: string): Promise<Group> {
   const response = await api(`/landing-page/groups/${groupId}`, {
     next: {
       revalidate: 60 * 15, // 15 minutes
@@ -22,7 +22,7 @@ export async function getGroup(groupId: string): Promise<Group> {
 }
 
 export async function generateMetadata({ params }: JoinGroupProps) {
-  const group = await getGroup(params.groupId)
+  const group = await getGroupData(params.groupId)
 
   return {
     title: `Junte-se ao grupo ${group?.name} no Bora Rachar!`,
