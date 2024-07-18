@@ -16,6 +16,7 @@ export const env = createEnv({
   clientPrefix: 'NEXT_PUBLIC_',
   client: {
     NEXT_PUBLIC_AMPLITUDE_API_KEY: z.string(),
+    NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL: z.string(),
   },
   runtimeEnv: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
@@ -26,6 +27,8 @@ export const env = createEnv({
     FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
     FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
     NEXT_PUBLIC_AMPLITUDE_API_KEY: process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY,
+    NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL:
+      process.env.NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL,
     API_BASE_URL: process.env.API_BASE_URL,
     API_TOKEN: process.env.API_TOKEN,
   },
