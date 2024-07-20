@@ -9,16 +9,20 @@ export interface JoinGroupProps {
   }
 }
 
-async function getGroupData(groupId: string): Promise<Group> {
-  const response = await api(`/landing-page/groups/${groupId}`, {
-    next: {
-      revalidate: 60 * 15, // 15 minutes
-    },
-  })
+async function getGroupData(groupId: string): Promise<Group | undefined> {
+  try {
+    const response = await api(`/landing-page/groups/${groupId}`, {
+      next: {
+        revalidate: 60 * 60, // 1 hour
+      },
+    })
 
-  const group = await response.json()
+    const group = await response.json()
 
-  return group
+    return group
+  } catch (error) {
+    console.log('Error fetching group data', error)
+  }
 }
 
 export async function generateMetadata({ params }: JoinGroupProps) {
