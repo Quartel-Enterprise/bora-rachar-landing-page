@@ -8,14 +8,39 @@ import { DownloadAndroidApkButton } from './download-android-apk-button'
 import { LeadForm } from './lead-form'
 import { SpacingWrapper } from './spacing-wrapper'
 
+function LeadFormCTA() {
+  return (
+    <>
+      <p className="max-w-xl text-lg text-white">
+        Faça parte da inovação na maneira de dividir suas contas e entre para
+        fila de espera
+      </p>
+      <LeadForm origin="welcome" />
+    </>
+  )
+}
+
 function WelcomeCTA() {
   const searchParams = useSearchParams()
   const isBetaTester = searchParams.get('beta_tester') === 'true'
 
   return isBetaTester ? (
-    <DownloadAndroidApkButton />
+    <>
+      <p className="max-w-xl text-lg text-white">
+        Seja bem-vindo ao acesso antecipado do Bora Rachar! Esta é uma versão
+        instável e pode apresentar falhas. Não deixe de{' '}
+        <a
+          href="https://forms.gle/uEHzeAAJEkoxZ6GQ8"
+          target="__blank"
+          className="underline"
+        >
+          relatar suas experiências!
+        </a>
+      </p>
+      <DownloadAndroidApkButton />
+    </>
   ) : (
-    <LeadForm origin="welcome" />
+    <LeadFormCTA />
   )
 }
 
@@ -27,12 +52,8 @@ export function Welcome() {
           <h1 className="max-w-2xl text-5xl font-bold text-white">
             A melhor maneira de dividir contas com os amigos
           </h1>
-          <p className="max-w-xl text-lg text-white">
-            Faça parte da inovação na maneira de dividir suas contas e entre
-            para fila de espera
-          </p>
 
-          <Suspense fallback={<LeadForm origin="welcome" />}>
+          <Suspense fallback={<LeadFormCTA />}>
             <WelcomeCTA />
           </Suspense>
         </div>
