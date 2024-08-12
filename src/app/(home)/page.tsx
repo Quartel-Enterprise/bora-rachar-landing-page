@@ -6,7 +6,7 @@ import { Welcome } from '@/components/welcome'
 
 export default function Home() {
   return (
-    <>
+    <div className="font-roboto">
       <Header />
       <Welcome />
       <HowToPayDebt />
@@ -14,6 +14,6 @@ export default function Home() {
       {/* <Roadmap /> */}
       {/* <TakePart /> */}
       <Footer />
-    </>
+    </div>
   )
 }

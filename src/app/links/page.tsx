@@ -62,14 +62,6 @@ export default function LinkThree() {
       >
         <p className="text-white">Conheça mais sobre o app</p>
       </Link>
-
-      <div className="mt-8 flex max-w-lg flex-col pb-2">
-        <p className="mb-2 text-white xs:mb-0">
-          Entre para fila de espera para ser informado quando lançarmos nossa
-          primeira versão:
-        </p>
-        <LeadForm origin="links_page" />
-      </div>
     </div>
   )
 }
