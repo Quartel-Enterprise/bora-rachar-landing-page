@@ -20,7 +20,7 @@ const config: Config = {
         logo: 'hsl(var(--logo))',
       },
       screens: {
-        xs: '375px',
+        xs: '420px',
       },
     },
   },
