@@ -9,6 +9,7 @@ const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
   weight: ['400', '700', '500'],
+  display: 'swap',
 })
 const ubuntu = Ubuntu({
   subsets: ['latin'],

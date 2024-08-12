@@ -4,7 +4,6 @@ import { Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
 import { Logo } from '@/assets/logo'
-import { LeadForm } from '@/components/lead-form'
 import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export default function LinkThree() {
