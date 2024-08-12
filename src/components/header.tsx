@@ -3,6 +3,7 @@
 import { Instagram } from 'lucide-react'
 
 import { Logo } from '@/assets/logo'
+import { env } from '@/env'
 import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export function Header() {
@@ -44,18 +45,13 @@ export function Header() {
         >
           Como Funciona
         </nav>
-        <nav
-          onClick={() => handleNavClick('innovation')}
-          className="hidden cursor-pointer sm:flex"
-        >
-          Inovação
-        </nav>
-        <nav
+        <a
+          href={env.NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL}
           onClick={() => handleNavClick('register')}
           className="hidden cursor-pointer rounded-lg bg-primary px-6 py-2.5 font-bold text-white xs:block"
         >
-          Inscreva-se
-        </nav>
+          Download APK
+        </a>
       </div>
     </div>
   )

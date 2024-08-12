@@ -16,10 +16,10 @@ export function DownloadAndroidApkButton() {
             version: 'beta_0.0.0',
           })
         }
-        className="mt-6 flex justify-center rounded-lg bg-tertiary px-8 py-3 font-bold text-white md:inline-flex"
+        className="mt-3 flex justify-center rounded-lg bg-tertiary px-8 py-3 font-bold text-white sm:mt-6 md:inline-flex"
       >
         <Smartphone className="mr-2 h-6 w-6" />
-        Download APP
+        Download APK
       </a>
     </div>
   )

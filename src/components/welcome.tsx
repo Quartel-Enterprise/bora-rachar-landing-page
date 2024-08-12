@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import { FriendSharingBill } from '@/assets/amigos-dividindo-conta'
 
 import { DownloadAndroidApkButton } from './download-android-apk-button'
+import { GooglePlayButton } from './google-play-button'
 import { LeadForm } from './lead-form'
 import { SpacingWrapper } from './spacing-wrapper'
 
@@ -40,7 +41,23 @@ function WelcomeCTA() {
       <DownloadAndroidApkButton />
     </>
   ) : (
-    <LeadFormCTA />
+    <>
+      <p className="max-w-xl text-lg text-white">
+        Comece a compartilhar experiências de uma forma simples e intuitiva com
+        o poder do Gemini!, não deixe de{' '}
+        <a
+          href="https://forms.gle/uEHzeAAJEkoxZ6GQ8"
+          target="__blank"
+          className="underline"
+        >
+          relatar suas experiências!
+        </a>
+      </p>
+      <div className="flex flex-col gap-6 sm:flex-row">
+        <DownloadAndroidApkButton />
+        <GooglePlayButton />
+      </div>
+    </>
   )
 }
 
