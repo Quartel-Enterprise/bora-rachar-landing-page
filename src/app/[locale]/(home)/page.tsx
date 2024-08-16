@@ -9,9 +9,8 @@ import { ComponentLocaleProps } from '@/utils/i18nConfig'
 
 export default function Home({ params: { locale } }: ComponentLocaleProps) {
   unstableSetRequestLocale(locale)
-
   return (
-    <div className="font-roboto">
+    <>
       <Header />
       <Welcome />
       <HowToCreateDebt />
@@ -19,6 +18,6 @@ export default function Home({ params: { locale } }: ComponentLocaleProps) {
       {/* <Roadmap /> */}
       {/* <TakePart /> */}
       <Footer />
-    </div>
+    </>
   )
 }
