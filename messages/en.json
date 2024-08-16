@@ -17,6 +17,15 @@
   "LandingPageHowToPayDebt": {
     "title": "How to Pay a Debt?",
     "card1Title": "View your Bills",
-    "card1Description": "When you have active bills, they will be available with the payment methods set by the bill creator."
+    "card1Description": "When you have active bills, they will be available for payment."
+  },
+  "LandingPageHowToCreateDebt": {
+    "title": "How to Create a Debt?",
+    "card1Title": "Create your Group",
+    "card1Description": "Within Blitz Split, you can create groups where you and your friends' expenses will be concentrated.",
+    "card2Title": "Invite your Friends",
+    "card2Description": "When you create a group, you can invite your friends to join.",
+    "card3Title": "Split your Bills",
+    "card3Description": "Now just register your bills to split between the group participants in the way you prefer!"
   }
 }

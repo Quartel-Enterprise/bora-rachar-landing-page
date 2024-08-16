@@ -17,11 +17,15 @@
   "LandingPageHowToPayDebt": {
     "title": "Como Pagar uma Dívida?",
     "card1Title": "Visualize suas Contas",
-    "card1Description": "Quando você tem contas ativas, elas estarão disponíveis com os métodos de pagamento definidos pelo criador da conta."
+    "card1Description": "Quando você tem contas ativas, elas estarão disponíveis para serem pagas."
   },
   "LandingPageHowToCreateDebt": {
-    "title": "Como Pagar uma Dívida?",
-    "card1Title": "Visualize suas Contas",
-    "card1Description": "Quando você tem contas ativas, elas estarão disponíveis com os métodos de pagamento definidos pelo criador da conta."
+    "title": "Como Criar uma Dívida?",
+    "card1Title": "Crie seu Grupo",
+    "card1Description": "Dentro do Bora Rachar é possível criar grupos, em que ficarão concentrados os seus gastos e dos seus amigos.",
+    "card2Title": "Convide seus Amigos",
+    "card2Description": "Ao criar um grupo, você poderá convidar seus amigos para participar.",
+    "card3Title": "Dívida suas Contas",
+    "card3Description": "Agora é só cadastrar as suas contas para dividir entre os participantes do grupo da maneira que preferir!"
   }
 }

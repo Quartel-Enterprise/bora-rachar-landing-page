@@ -1,28 +1,30 @@
+import { useTranslations } from 'next-intl'
+
 import { ExplanationCard } from './explanation-card'
 import { SpacingWrapper } from './spacing-wrapper'
 
 export function HowToCreateDebt() {
+  const t = useTranslations('LandingPageHowToCreateDebt')
+
   return (
     <div id="how_it_work">
       <SpacingWrapper>
-        <h2 className="mb-11 text-4xl font-medium md:mb-16">
-          Como Criar uma Dívida?
-        </h2>
+        <h2 className="mb-11 text-4xl font-medium md:mb-16">{t('title')}</h2>
 
         <div className="flex flex-col gap-6 md:gap-12">
           <ExplanationCard
             step={1}
             image="/criar-novo-grupo.webp"
-            title="Crie seu Grupo"
-            description="Dentro do Bora Rachar é possível criar grupos, em que ficarão concentrados os seus gastos e dos seus amigos."
+            title={t('card1Title')}
+            description={t('card1Description')}
             secondary
           />
 
           <ExplanationCard
             step={2}
             image="/convidar-amigos.webp"
-            title="Convide seus Amigos"
-            description="Ao criar um grupo, você poderá convidar seus amigos para participar."
+            title={t('card2Title')}
+            description={t('card2Description')}
             secondary
             reverse
           />
@@ -30,8 +32,8 @@ export function HowToCreateDebt() {
           <ExplanationCard
             step={3}
             image="/rachar-conta.webp"
-            title="Dívida suas Contas"
-            description="Agora é só cadastrar as suas contas para dividir entre os participantes do grupo da maneira que preferir!"
+            title={t('card3Title')}
+            description={t('card3Description')}
             secondary
           />
         </div>
