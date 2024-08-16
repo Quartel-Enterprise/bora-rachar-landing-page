@@ -1,5 +1,9 @@
 {
   "LandingPageHeader": {
     "title": "Bora Rachar"
+  },
+  "GroupInviteLink": {
+    "title": "Junte-se ao grupo ${groupName} no Bora Rachar!",
+    "description": "Junte-se com ${invitedFor} e comece a dividir contas e experiências!"
   }
 }

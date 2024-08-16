@@ -1,3 +1,5 @@
+import { getTranslations } from 'next-intl/server'
+
 import { api } from '@/data/api'
 import { Group } from '@/data/types/group'
 
@@ -6,6 +8,7 @@ import OpenApp from './OpenApp'
 export interface JoinGroupProps {
   params: {
     groupId: string
+    locale: string
   }
 }
 
@@ -25,12 +28,15 @@ async function getGroupData(groupId: string): Promise<Group | undefined> {
   }
 }
 
-export async function generateMetadata({ params }: JoinGroupProps) {
-  const group = await getGroupData(params.groupId)
+export async function generateMetadata({
+  params: { groupId, locale },
+}: JoinGroupProps) {
+  const group = await getGroupData(groupId)
+  const t = await getTranslations({ locale, namespace: 'GroupInviteLink' })
 
   return {
-    title: `Junte-se ao grupo ${group?.name} no Bora Rachar!`,
-    description: `Junte-se com ${group?.invitedBy?.name} ao grupo ${group?.name} e comece a dividir contas e experiências!`,
+    title: t('title', { groupName: group?.name }),
+    description: t('description', { invitedFor: group?.invitedBy.name }),
     openGraph: {
       images: [group?.photo],
     },

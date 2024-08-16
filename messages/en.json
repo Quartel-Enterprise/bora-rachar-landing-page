@@ -1,5 +1,9 @@
 {
   "LandingPageHeader": {
     "title": "Blitz Split"
+  },
+  "GroupInviteLink": {
+    "title": "Join the {groupName} group on Blitz Split!",
+    "description": "Join the group and start sharing bills and experiences with {invitedFor}!"
   }
 }
