@@ -1,6 +1,7 @@
 'use client'
 
 import { Instagram } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { Logo } from '@/assets/logo'
 import { env } from '@/env'
@@ -8,6 +9,7 @@ import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export function Header() {
   const { trackAmplitudeEvent } = useAmplitudeContext()
+  const t = useTranslations('LandingPageHeader')
 
   function handleNavClick(id: string) {
     trackAmplitudeEvent(`header_${id}_click`)
@@ -25,7 +27,7 @@ export function Header() {
     <div className="flex items-center justify-between px-4 py-3.5 md:px-8">
       <div className="flex items-center gap-4">
         <Logo />
-        <div className="font-ubuntu text-lg">Bora Rachar</div>
+        <div className="font-ubuntu text-lg">{t('title')}</div>
 
         <div className="mx-1 h-7 w-px bg-gray-300 xs:hidden sm:block" />
 
