@@ -52,7 +52,7 @@ export function Header() {
           onClick={() => handleNavClick('register')}
           className="hidden cursor-pointer rounded-lg bg-primary px-6 py-2.5 font-bold text-white xs:block"
         >
-          {t('downloadButton')}
+          {t('downloadAPKButton')}
         </a>
       </div>
     </div>

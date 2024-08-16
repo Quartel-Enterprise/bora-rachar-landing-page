@@ -1,11 +1,17 @@
 {
-  "LandingPageHeader": {
-    "title": "Bora Rachar",
-    "howItWorks": "Como Funciona",
-    "downloadButton": "Download APK"
-  },
   "GroupInviteLink": {
     "title": "Junte-se ao grupo ${groupName} no Bora Rachar!",
     "description": "Junte-se com ${invitedFor} e comece a dividir contas e experiências!"
+  },
+  "LandingPageHeader": {
+    "title": "Bora Rachar",
+    "howItWorks": "Como Funciona",
+    "downloadAPKButton": "Download APK"
+  },
+  "LandingPageWelcome": {
+    "title": "A melhor maneira de dividir contas com os amigos",
+    "description": "Comece a compartilhar experiências de uma forma simples e intuitiva com o poder do Gemini!, não deixe de <sendReport>relatar suas experiências!</sendReport>",
+    "downloadAPKButton": "Download APK",
+    "googlePlayButton": "Google Play (em breve)"
   }
 }
