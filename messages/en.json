@@ -1,6 +1,8 @@
 {
   "LandingPageHeader": {
-    "title": "Blitz Split"
+    "title": "Blitz Split",
+    "howItWorks": "How It Works",
+    "downloadButton": "Download APK"
   },
   "GroupInviteLink": {
     "title": "Join the {groupName} group on Blitz Split!",

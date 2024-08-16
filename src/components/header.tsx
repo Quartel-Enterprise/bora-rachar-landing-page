@@ -45,14 +45,14 @@ export function Header() {
           onClick={() => handleNavClick('how_it_work')}
           className="hidden cursor-pointer sm:flex"
         >
-          Como Funciona
+          {t('howItWorks')}
         </nav>
         <a
           href={env.NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL}
           onClick={() => handleNavClick('register')}
           className="hidden cursor-pointer rounded-lg bg-primary px-6 py-2.5 font-bold text-white xs:block"
         >
-          Download APK
+          {t('downloadButton')}
         </a>
       </div>
     </div>

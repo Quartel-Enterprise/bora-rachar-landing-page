@@ -1,6 +1,8 @@
 {
   "LandingPageHeader": {
-    "title": "Bora Rachar"
+    "title": "Bora Rachar",
+    "howItWorks": "Como Funciona",
+    "downloadButton": "Download APK"
   },
   "GroupInviteLink": {
     "title": "Junte-se ao grupo ${groupName} no Bora Rachar!",
