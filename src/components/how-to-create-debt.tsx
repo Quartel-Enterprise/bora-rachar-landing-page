@@ -3,9 +3,9 @@ import { SpacingWrapper } from './spacing-wrapper'
 
 export function HowToCreateDebt() {
   return (
-    <div className="bg-primary">
+    <div id="how_it_work">
       <SpacingWrapper>
-        <h2 className="mb-11 text-4xl font-medium text-white md:mb-16">
+        <h2 className="mb-11 text-4xl font-medium md:mb-16">
           Como Criar uma Dívida?
         </h2>
 
@@ -15,6 +15,7 @@ export function HowToCreateDebt() {
             image="/criar-novo-grupo.webp"
             title="Crie seu Grupo"
             description="Dentro do Bora Rachar é possível criar grupos, em que ficarão concentrados os seus gastos e dos seus amigos."
+            secondary
           />
 
           <ExplanationCard
@@ -22,6 +23,7 @@ export function HowToCreateDebt() {
             image="/convidar-amigos.webp"
             title="Convide seus Amigos"
             description="Ao criar um grupo, você poderá convidar seus amigos para participar."
+            secondary
             reverse
           />
 
@@ -30,6 +32,7 @@ export function HowToCreateDebt() {
             image="/rachar-conta.webp"
             title="Dívida suas Contas"
             description="Agora é só cadastrar as suas contas para dividir entre os participantes do grupo da maneira que preferir!"
+            secondary
           />
         </div>
       </SpacingWrapper>

@@ -9,8 +9,8 @@ export default function Home() {
     <div className="font-roboto">
       <Header />
       <Welcome />
-      <HowToPayDebt />
       <HowToCreateDebt />
+      <HowToPayDebt />
       {/* <Roadmap /> */}
       {/* <TakePart /> */}
       <Footer />
