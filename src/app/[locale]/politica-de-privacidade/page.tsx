@@ -1,4 +1,12 @@
-export default function PrivacyPolicy() {
+import { unstable_setRequestLocale as unstableSetRequestLocale } from 'next-intl/server'
+
+import { ComponentLocaleProps } from '@/utils/i18nConfig'
+
+export default function PrivacyPolicy({
+  params: { locale },
+}: ComponentLocaleProps) {
+  unstableSetRequestLocale(locale)
+
   return (
     <div className="mx-auto flex max-w-4xl flex-col p-16">
       <h1 className="mb-4 text-3xl font-bold">

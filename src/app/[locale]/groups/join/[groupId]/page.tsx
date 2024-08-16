@@ -1,4 +1,7 @@
-import { getTranslations } from 'next-intl/server'
+import {
+  getTranslations,
+  unstable_setRequestLocale as unstableSetRequestLocale,
+} from 'next-intl/server'
 
 import { api } from '@/data/api'
 import { Group } from '@/data/types/group'
@@ -44,5 +47,7 @@ export async function generateMetadata({
 }
 
 export default function JoinGroup({ params }: JoinGroupProps) {
+  unstableSetRequestLocale(params.locale)
+
   return <OpenApp groupId={params.groupId} />
 }

@@ -1,5 +1,4 @@
 'use client'
-
 import { Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
