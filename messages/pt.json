@@ -13,5 +13,10 @@
     "description": "Comece a compartilhar experiências de uma forma simples e intuitiva com o poder do Gemini!, não deixe de <sendReport>relatar suas experiências!</sendReport>",
     "downloadAPKButton": "Download APK",
     "googlePlayButton": "Google Play (em breve)"
+  },
+  "LandingPageHowToPayDebt": {
+    "title": "Como Pagar uma Dívida?",
+    "card1Title": "Visualize suas Contas",
+    "card1Description": "Quando você tem contas ativas, elas estarão disponíveis com os métodos de pagamento definidos pelo criador da conta."
   }
 }

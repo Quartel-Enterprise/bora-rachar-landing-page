@@ -13,5 +13,10 @@
     "description": "Start sharing experiences in a simple and intuitive way with the power of Gemini!, don't forget to <sendReport>report your experiences!</sendReport>",
     "downloadAPKButton": "Download APK",
     "googlePlayButton": "Google Play (coming soon)"
+  },
+  "LandingPageHowToPayDebt": {
+    "title": "How to Pay a Debt?",
+    "card1Title": "View your Bills",
+    "card1Description": "When you have active bills, they will be available with the payment methods set by the bill creator."
   }
 }

@@ -1,17 +1,19 @@
+import { useTranslations } from 'next-intl'
+
 import { ExplanationCard } from './explanation-card'
 import { SpacingWrapper } from './spacing-wrapper'
 
 export function HowToPayDebt() {
+  const t = useTranslations('LandingPageHowToPayDebt')
+
   return (
     <SpacingWrapper id="how_it_work">
-      <h2 className="mb-11 text-4xl font-medium md:mb-16">
-        Como Pagar uma Dívida?
-      </h2>
+      <h2 className="mb-11 text-4xl font-medium md:mb-16">{t('title')}</h2>
 
       <ExplanationCard
         step={1}
-        title="Visualize suas Contas"
-        description="Quando você tem contas ativas, elas estarão disponíveis com os métodos de pagamento definidos pelo criador da conta."
+        title={t('card1Title')}
+        description={t('card1Description')}
         image="/visualizar-conta-em-grupo.webp"
         reverse
         secondary
