@@ -9,7 +9,7 @@ export default function OpenApp({ groupId }: { groupId: string }) {
 
     const timer = setTimeout(() => {
       if (!document.hidden) {
-        window.location.href = '/?beta_tester=true'
+        window.location.href = '/'
       }
     }, 2000)
 

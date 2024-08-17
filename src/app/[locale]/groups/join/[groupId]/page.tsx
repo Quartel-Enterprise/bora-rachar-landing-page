@@ -37,6 +37,17 @@ export async function generateMetadata({
   const group = await getGroupData(groupId)
   const t = await getTranslations({ locale, namespace: 'GroupInviteLink' })
 
+  console.log({
+    groupId,
+    locale,
+    return: {
+      title: t('title', { groupName: group?.name }),
+      description: t('description', { invitedFor: group?.invitedBy.name }),
+      openGraph: {
+        images: group?.photo,
+      },
+    },
+  })
   return {
     title: t('title', { groupName: group?.name }),
     description: t('description', { invitedFor: group?.invitedBy.name }),
