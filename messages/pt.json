@@ -1,4 +1,11 @@
 {
+  "Metadata": {
+    "title": "Bora Rachar",
+    "description": "A melhor maneira de dividir contas com os amigos",
+    "keywords": "dividir, contas, amigos, despesas, grupo, compartilhar, experiências",
+    "link": "https://borarachar.com/pt",
+    "ogImage": "/og-image-pt.jpg"
+  },
   "GroupInviteLink": {
     "title": "Junte-se ao grupo {groupName} no Bora Rachar!",
     "description": "Junte-se com {invitedFor} e comece a dividir contas e experiências!"

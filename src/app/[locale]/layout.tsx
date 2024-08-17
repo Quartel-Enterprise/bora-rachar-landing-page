@@ -5,11 +5,12 @@ import { Roboto, Ubuntu } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import {
   getMessages,
+  getTranslations,
   unstable_setRequestLocale as unstableSetRequestLocale,
 } from 'next-intl/server'
 
 import AmplitudeContextProvider from '@/context/amplitude'
-import { locales } from '@/utils/i18nConfig'
+import { ComponentLocaleProps, locales } from '@/utils/i18nConfig'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -23,10 +24,20 @@ const ubuntu = Ubuntu({
   weight: ['400'],
 })
 
-export const metadata: Metadata = {
-  title: 'Bora Rachar',
-  description: 'Rache contas e experiências',
-  metadataBase: new URL('https://borarachar.com/'),
+export async function generateMetadata({
+  params: { locale },
+}: ComponentLocaleProps): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    metadataBase: new URL(t('link')),
+    openGraph: {
+      images: [t('ogImage')],
+    },
+  }
 }
 
 export function generateStaticParams() {
