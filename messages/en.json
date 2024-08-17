@@ -4,7 +4,7 @@
     "description": "The best way to split bills with friends",
     "keywords": "split, bills, friends, expenses, group, share, experiences",
     "link": "https://borarachar.com/en",
-    "ogImage": "/og-image-en.jpg"
+    "ogImage": "https://borarachar.com//og-image-en.jpg"
   },
   "GroupInviteLink": {
     "title": "Join the {groupName} group on Blitz Split!",
