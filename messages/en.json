@@ -27,5 +27,9 @@
     "card2Description": "When you create a group, you can invite your friends to join.",
     "card3Title": "Split your Bills",
     "card3Description": "Now just register your bills to split between the group participants in the way you prefer!"
+  },
+  "LinksPage": {
+    "title": "Blitz Split",
+    "knowMore": "Know more about the app"
   }
 }

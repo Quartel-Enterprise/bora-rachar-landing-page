@@ -7,7 +7,7 @@ import { Logo } from '@/assets/logo'
 import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export default function LinkThree() {
-  const t = useTranslations('HomePage')
+  const t = useTranslations('LinksPage')
   const { trackAmplitudeEvent } = useAmplitudeContext()
 
   function handleInstagramClick() {
@@ -26,7 +26,7 @@ export default function LinkThree() {
     <div className="flex min-h-screen flex-col items-center gap-5 bg-slate-800 px-4 py-8">
       <div className="mb-4 flex items-center gap-4">
         <Logo />
-        <div className="font-ubuntu text-lg text-white">Bora Rachar</div>
+        <div className="font-ubuntu text-lg text-white">{t('title')}</div>
       </div>
 
       <Link
@@ -60,7 +60,7 @@ export default function LinkThree() {
         className="flex h-14 w-full max-w-lg cursor-pointer items-center justify-center gap-4 rounded-lg border-[1px] px-2 py-3"
         onClick={handleLandingPageClick}
       >
-        <p className="text-white">Conheça mais sobre o app</p>
+        <p className="text-white">{t('knowMore')}</p>
       </Link>
     </div>
   )
