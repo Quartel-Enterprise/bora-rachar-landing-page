@@ -1,11 +1,13 @@
 'use client'
 import { Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 import { Logo } from '@/assets/logo'
 import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
 export default function LinkThree() {
+  const t = useTranslations('HomePage')
   const { trackAmplitudeEvent } = useAmplitudeContext()
 
   function handleInstagramClick() {
