@@ -38,5 +38,16 @@
   "LinksPage": {
     "title": "Blitz Split",
     "knowMore": "Know more about the app"
+  },
+  "DeleteAccount": {
+    "title": "How to delete your account",
+    "requestInstructions": "To request the deletion of your account and data, please send an email to <email>appborarachar@gmail.com</email> with the subject \"Account Deletion Request\".",
+    "emailInstructions": "In the email body, please include the following information:",
+    "usernameInstruction": "Your username",
+    "emailInstruction": "The email address associated with your account",
+    "confirmationInstruction": "A brief confirmation that you want to delete your account and data",
+    "processingConfirmation": "After we receive your request, we will process it as quickly as possible. You will receive a confirmation email when your account and data have been deleted.",
+    "dataRecoveryWarning": "Please note that once your account is deleted, your data cannot be recovered.",
+    "contactInformation": "If you have any questions, please contact us by email at <email>appborarachar@gmail.com</email>."
   }
 }

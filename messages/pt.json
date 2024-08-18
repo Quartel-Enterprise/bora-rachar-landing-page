@@ -38,5 +38,16 @@
   "LinksPage": {
     "title": "Bora Rachar",
     "knowMore": "Conheça mais sobre o app"
+  },
+  "DeleteAccount": {
+    "title": "Como deletar sua conta",
+    "requestInstructions": "Para solicitar a exclusão da sua conta e dos seus dados, por favor, envie um e-mail para <email>appborarachar@gmail.com</email> com o assunto \"Solicitação de Exclusão de Conta\".",
+    "emailInstructions": "No corpo do e-mail, por favor, inclua as seguintes informações:",
+    "usernameInstruction": "Seu nome de usuário",
+    "emailInstruction": "O endereço de e-mail associado à sua conta",
+    "confirmationInstruction": "Uma breve confirmação de que você deseja deletar sua conta e seus dados",
+    "processingConfirmation": "Após recebermos sua solicitação, iremos processá-la o mais rápido possível. Você receberá um e-mail de confirmação quando sua conta e seus dados forem excluídos.",
+    "dataRecoveryWarning": "Observe que, após a exclusão da sua conta, seus dados não poderão ser recuperados.",
+    "contactInformation": "Se você tiver alguma dúvida, entre em contato conosco pelo e-mail <email>appborarachar@gmail.com</email>."
   }
 }
