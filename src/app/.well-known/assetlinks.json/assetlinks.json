@@ -1,9 +1,15 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.quare.blitzsplit",
-    "sha256_cert_fingerprints":
-    ["67:59:D0:FD:9D:C1:25:23:69:DC:6D:D0:FB:4E:C0:84:74:64:D3:AC:D3:15:9D:63:74:7F:86:D9:8E:79:C7:0D"]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quare.blitzsplit",
+      "sha256_cert_fingerprints": [
+        "67:59:D0:FD:9D:C1:25:23:69:DC:6D:D0:FB:4E:C0:84:74:64:D3:AC:D3:15:9D:63:74:7F:86:D9:8E:79:C7:0D",
+        "D0:5D:D4:17:A7:D5:23:D0:D0:28:4F:DA:8B:21:C6:6C:68:52:CC:96:85:0D:D3:AE:3A:BC:20:48:CD:6E:23:B1"
+      ]
+    }
   }
-}]
+]
