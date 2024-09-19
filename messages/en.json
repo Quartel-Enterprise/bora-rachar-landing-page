@@ -159,7 +159,7 @@
     "informationCollection-description": "We collect information about you in a variety of ways when you use the App. This information may include:",
     "informationCollection-directInformation-title": "a) Information You Provide Directly to Us:",
     "informationCollection-directInformation-accountInfo": "Account Information: When you create an account on the App, you provide us with information such as your username, email address, and password. You may also choose to provide additional information, such as your profile picture and phone number.",
-    "informationCollection-directInformation-userContent": "User Content: When using the App, you may provide information about your payment methods, including brazilian pix, bank details, cryptocurrency wallets, your expenses, including description, amount, date, and participants.",
+    "informationCollection-directInformation-userContent": "User Content: When using the App, you may provide information about your payment methods, including brazilian pix, bank details, cryptocurrency wallets, your expenses, including description, amount, date, and participants. If you allow, we may collect camera and gallery information.",
     "informationCollection-directInformation-communications": "Communications: If you contact us directly, we may collect information such as your name, email address, phone number, and the content of your message.",
     "informationCollection-automaticInformation-title": "b) Information We Collect Automatically:",
     "informationCollection-automaticInformation-usageInfo": "Usage Information: We collect information about how you use the App, such as the features you access, the features you use, and how often you use the App.",
