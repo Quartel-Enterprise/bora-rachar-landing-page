@@ -48,11 +48,12 @@ export function Header() {
           {t('howItWorks')}
         </nav>
         <a
-          href={env.NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL}
-          onClick={() => handleNavClick('register')}
+          href={env.NEXT_PUBLIC_PLAYSTORE_URL}
+          target="_blank"
+          onClick={() => handleNavClick('download_app')}
           className="hidden cursor-pointer rounded-lg bg-primary px-6 py-2.5 font-bold text-white xs:block"
         >
-          {t('downloadAPKButton')}
+          {t('downloadAPPButton')}
         </a>
       </div>
     </div>

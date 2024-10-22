@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl'
 
 import { FriendSharingBill } from '@/assets/amigos-dividindo-conta'
 
-import { DownloadAndroidApkButton } from './download-android-apk-button'
 import { GooglePlayButton } from './google-play-button'
 import { SpacingWrapper } from './spacing-wrapper'
 
@@ -31,7 +30,6 @@ export function Welcome() {
             })}
           </p>
           <div className="flex flex-col gap-6 sm:flex-row">
-            <DownloadAndroidApkButton />
             <GooglePlayButton />
           </div>
         </div>

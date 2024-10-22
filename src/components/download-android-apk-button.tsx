@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { env } from '@/env'
 import useAmplitudeContext from '@/hooks/useAmplitudeContext'
 
+// DEPRECATED
 export function DownloadAndroidApkButton() {
   const { trackAmplitudeEvent } = useAmplitudeContext()
   const t = useTranslations('LandingPageWelcome')

@@ -17,6 +17,7 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_AMPLITUDE_API_KEY: z.string(),
     NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL: z.string(),
+    NEXT_PUBLIC_PLAYSTORE_URL: z.string(),
   },
   runtimeEnv: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
@@ -31,6 +32,7 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_DIRECT_DOWNLOAD_ANDROID_URL,
     API_BASE_URL: process.env.API_BASE_URL,
     API_TOKEN: process.env.API_TOKEN,
+    NEXT_PUBLIC_PLAYSTORE_URL: process.env.NEXT_PUBLIC_PLAYSTORE_URL,
   },
   emptyStringAsUndefined: true,
 })

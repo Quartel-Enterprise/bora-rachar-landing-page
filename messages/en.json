@@ -13,13 +13,14 @@
   "LandingPageHeader": {
     "title": "Blitz Split",
     "howItWorks": "How It Works",
-    "downloadAPKButton": "Download APK"
+    "downloadAPKButton": "Download APK",
+    "downloadAPPButton": "Download APP"
   },
   "LandingPageWelcome": {
     "title": "The best way to split bills with friends",
     "description": "Start sharing experiences in a simple and intuitive way with the power of Gemini! Don't forget to <sendReport>report your experiences!</sendReport>",
     "downloadAPKButton": "Download APK",
-    "googlePlayButton": "Google Play (coming soon)"
+    "googlePlayButton": "Google Play"
   },
   "LandingPageHowToPayDebt": {
     "title": "How to Pay a Debt?",
