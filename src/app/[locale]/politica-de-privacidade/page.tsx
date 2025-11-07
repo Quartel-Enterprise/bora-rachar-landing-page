@@ -1,10 +1,11 @@
+import { use } from "react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
 import { ComponentLocaleProps } from "@/utils/i18nConfig";
 
-export default async function PrivacyPolicy(props: ComponentLocaleProps) {
-  const params = await props.params;
+export default function PrivacyPolicy(props: ComponentLocaleProps) {
+  const params = use(props.params);
 
   const { locale } = params;
 
