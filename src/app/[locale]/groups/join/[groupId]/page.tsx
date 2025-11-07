@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { api } from "@/data/api";
-import { Group } from "@/data/types/group";
+import { GroupResponse } from "@/data/types/group";
 
 import OpenApp from "./OpenApp";
 
@@ -12,11 +12,13 @@ export interface JoinGroupProps {
   }>;
 }
 
-async function getGroupData(groupId: string): Promise<Group | undefined> {
+async function getGroupData(
+  groupId: string,
+): Promise<GroupResponse | undefined> {
   try {
-    const response = await api(`/landing-page/groups/${groupId}`, {
+    const response = await api(`/groups/invite/${groupId}`, {
       next: {
-        revalidate: 60 * 60, // 1 hour
+        revalidate: 1, // 1 hour
       },
     });
 
@@ -37,10 +39,10 @@ export async function generateMetadata(props: JoinGroupProps) {
   const t = await getTranslations({ locale, namespace: "GroupInviteLink" });
 
   return {
-    title: t("title", { groupName: group?.name }),
-    description: t("description", { invitedFor: group?.invitedBy.name }),
+    title: t("title", { groupName: group?.group.name || "" }),
+    description: t("description", { invitedFor: group?.invitedBy.name || "" }),
     openGraph: {
-      images: [group?.photo],
+      images: [group?.group.imageUrl],
     },
   };
 }

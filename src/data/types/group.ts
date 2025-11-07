@@ -1,10 +1,19 @@
-interface InvitedBy {
-  name: string
-  photo: string
+interface Group {
+  id: string;
+  name: string;
+  imageUrl: string | null;
 }
 
-export interface Group {
-  name: string
-  photo: string
-  invitedBy: InvitedBy
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  imageUrl: string | null;
+}
+
+export interface GroupResponse {
+  group: Group;
+  invitedBy: User;
+  participants: User[];
+  temporaryUsers: User[];
 }
