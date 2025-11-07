@@ -1,18 +1,15 @@
-import {
-  getTranslations,
-  unstable_setRequestLocale as unstableSetRequestLocale,
-} from 'next-intl/server'
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { api } from '@/data/api'
-import { Group } from '@/data/types/group'
+import { api } from "@/data/api";
+import { Group } from "@/data/types/group";
 
-import OpenApp from './OpenApp'
+import OpenApp from "./OpenApp";
 
 export interface JoinGroupProps {
-  params: {
-    groupId: string
-    locale: string
-  }
+  params: Promise<{
+    groupId: string;
+    locale: string;
+  }>;
 }
 
 async function getGroupData(groupId: string): Promise<Group | undefined> {
@@ -21,33 +18,36 @@ async function getGroupData(groupId: string): Promise<Group | undefined> {
       next: {
         revalidate: 60 * 60, // 1 hour
       },
-    })
+    });
 
-    const group = await response.json()
+    const group = await response.json();
 
-    return group
+    return group;
   } catch (error) {
-    console.log('Error fetching group data', error)
+    console.log("Error fetching group data", error);
   }
 }
 
-export async function generateMetadata({
-  params: { groupId, locale },
-}: JoinGroupProps) {
-  const group = await getGroupData(groupId)
-  const t = await getTranslations({ locale, namespace: 'GroupInviteLink' })
+export async function generateMetadata(props: JoinGroupProps) {
+  const params = await props.params;
+
+  const { groupId, locale } = params;
+
+  const group = await getGroupData(groupId);
+  const t = await getTranslations({ locale, namespace: "GroupInviteLink" });
 
   return {
-    title: t('title', { groupName: group?.name }),
-    description: t('description', { invitedFor: group?.invitedBy.name }),
+    title: t("title", { groupName: group?.name }),
+    description: t("description", { invitedFor: group?.invitedBy.name }),
     openGraph: {
       images: [group?.photo],
     },
-  }
+  };
 }
 
-export default function JoinGroup({ params }: JoinGroupProps) {
-  unstableSetRequestLocale(params.locale)
+export default async function JoinGroup(props: JoinGroupProps) {
+  const params = await props.params;
+  setRequestLocale(params.locale);
 
-  return <OpenApp groupId={params.groupId} />
+  return <OpenApp groupId={params.groupId} />;
 }

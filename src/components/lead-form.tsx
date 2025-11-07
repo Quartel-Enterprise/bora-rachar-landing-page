@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
-import { useFormState } from 'react-dom'
+import { useEffect, useActionState } from 'react';
 
 import {
   createFirestoreLead,
@@ -14,7 +13,7 @@ import { LeadFormSubmitButton } from './lead-form-submit-button'
 
 export function LeadForm({ origin }: { origin: string }) {
   const { trackAmplitudeEvent } = useAmplitudeContext()
-  const [formState, createFirestoreLeadAction] = useFormState(
+  const [formState, createFirestoreLeadAction] = useActionState(
     createFirestoreLead,
     {} as CreateFirestoreLeadActionState,
   )
