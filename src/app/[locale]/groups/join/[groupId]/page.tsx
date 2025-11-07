@@ -18,7 +18,7 @@ async function getGroupData(
   try {
     const response = await api(`/groups/invite/${groupId}`, {
       next: {
-        revalidate: 1, // 1 hour
+        revalidate: 60 * 60, // 1 hour
       },
     });
 
